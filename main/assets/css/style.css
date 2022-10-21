@@ -62,23 +62,24 @@ h2 {
 
 /* -----CONTENT SECTIONS----- */
 /* Set sections as columns */
-.content-section {
+.content-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
-    align-self: space-between;
+    align-self: center;
     border: solid;
     border-color: var(--slavic-blue);
     border-radius: 5px;
 }
 
+/* -----ABOUT ME----- */
 .section-title {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    width: 25%;
     background-color: var(--flax);
     color: var(--slavic-blue);
     border: dotted;
@@ -86,36 +87,30 @@ h2 {
     margin: 10px 25px 10px 10px;
 }
 
-/* -----ABOUT ME----- */
-.my-about-me {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: var(--flax);
-    color: var(--slavic-blue);
-    border: dotted;
-    border-color: var(--slavic-red);
-}
-
-h2 {
-    border-right: 5px solid var(--slavic-blue);
-    height: 100px;
-    padding-right: 10px;
-}
-
 article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    min-width: 300px;
+    flex: 1 0;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
     border: dotted;
     border-color: var(--slavic-red);
-    margin: 10px 25px 10px 150px;
+    margin: 10px 25px 10px 10px;
+}
+
+.profile-pic {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: dotted;
+    border-color: var(--slavic-red);
 }
 
 article p {
@@ -129,7 +124,6 @@ article p {
 }
 
 /* -----MY PROJECTS----- */
-/* set content as a row (default) */
 .my-projects {
     display: flex;
     flex-wrap: wrap;
@@ -143,49 +137,94 @@ article p {
 
 .project-section {
     display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 300px;
+    flex: 1 1;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: var(--slavic-red);
+    /* margin: 10px 25px 10px 70px; */
+}
+
+.main-proj-area {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1 2;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: green;
+}
+
+.secondary-proj-area {
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
     border: dotted;
-    border-color: var(--slavic-red);
-    margin: 10px 25px 10px 70px;
+    border-color: green;
 }
-
-/* .project-section {
-    display: flex;
-    /* flex-wrap: wrap; 
-    flex-direction: row;
-    justify-content: space-between;
-    border: dotted;
-    border-color: var(--slavic-red);
-    padding: 10px 25px 10px 75px;
-} */
 
 .project-image img{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 200px;
     height: 50px;
-    padding: 10px 10px;
+    margin: 10px;
 }
+
+.main-proj-pic {
+    width: 50%;
+    min-width: 300px;
+}
+
+.main-proj-pic:hover,
+.project-image:hover {
+  box-shadow: inset 0px 0px 8px var(--slavic-red), 0 0 15px var(--slavic-red);
+}
+
 
 /* ----- CONTACT ME ----- */
 .contact-info {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-
 }
 
+#contact-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    flex: 1 1;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: var(--slavic-red);
+}
 /* Align navigation links*/
 #contact-bar ul {
     list-style-type: none;
@@ -209,25 +248,3 @@ the color will be dark slate blue */
 #contact-bar a:active {
     color: var(--slavic-red);
 } 
-
-
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* media query for larger screens */
-  @media screen and (min-width: 992px) {
-    header {
-      width: 75%;
-    }
-  
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }
-  }
