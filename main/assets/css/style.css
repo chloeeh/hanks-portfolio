@@ -1,0 +1,71 @@
+
+:root {
+    --slavic-red: rgb(186, 60, 60);
+    --slavic-blue: rgb(66, 60, 101);
+    --wheat: #ebbf83;
+    --flax: #f1d7b2;
+}
+
+
+/* ----- BODY ----- */
+
+/*Add color to body background*/
+body {
+    background-color: #f1d7b2;
+} 
+
+/* ----- HEADER ----- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--slavic-red);
+    color: var(--wheat);
+}
+
+/* Align navigation links*/
+#header-bar ul {
+    list-style-type: none;
+    text-align: right;
+    }
+
+#header-text {
+    color: var(--wheat);
+}
+/* set header list properties */
+.header-link {
+    list-style-type: none;
+    font-size: 20px;
+    display: inline;
+    padding: 10px 25px 0px 10px;
+}
+
+/* Define text color for navigation links*/
+#header-bar a {
+    color: var(--wheat); 
+}
+/* When links are clicked (or clicked and held) 
+the color will be dark slate blue */
+#header bar a:active {
+    color: rgb(66, 60, 101);
+} 
+
+h1,
+h2 {
+    font-size: 200%;
+    color: var(--slavic-blue);
+}
+
+/* Set profile picture properties */
+.profile-pic img{
+    max-width: 200px;
+    float: right;
+}
+
+.project-image img{
+    width: 200px;
+    height: 50px;
+}
+
