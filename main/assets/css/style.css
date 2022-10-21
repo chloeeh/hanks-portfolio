@@ -80,7 +80,6 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    /* width: 25%; */
     background-color: var(--flax);
     color: var(--slavic-blue);
     border: dotted;
@@ -101,7 +100,6 @@ article {
     border: dotted;
     border-color: var(--slavic-red);
     margin: 10px 25px 10px 10px;
-    /* margin: 10px 25px 10px 150px; */
 }
 
 .profile-pic {
@@ -126,7 +124,6 @@ article p {
 }
 
 /* -----MY PROJECTS----- */
-/* set content as a row (default) */
 .my-projects {
     display: flex;
     flex-wrap: wrap;
@@ -141,7 +138,7 @@ article p {
 .project-section {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: flex-end;
     align-items: center;
     min-width: 300px;
@@ -156,10 +153,10 @@ article p {
 
 .main-proj-area {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex: 1 2;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
@@ -173,7 +170,6 @@ article p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex: 1 2;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
@@ -189,7 +185,7 @@ article p {
     justify-content: space-between;
     width: 200px;
     height: 50px;
-    padding: 10px 10px;
+    margin: 10px;
 }
 
 .main-proj-pic {
@@ -197,17 +193,22 @@ article p {
     min-width: 300px;
 }
 
+.main-proj-pic:hover,
+.project-image:hover {
+  box-shadow: inset 0px 0px 8px var(--slavic-red), 0 0 15px var(--slavic-red);
+}
+
 
 /* ----- CONTACT ME ----- */
 .contact-info {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    margin: 50px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-
 }
 
 #contact-bar {
