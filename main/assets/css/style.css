@@ -11,6 +11,8 @@
 
 /*Add color to body background*/
 body {
+    display: flex;
+  flex-direction: column;
     background-color: #f1d7b2;
 } 
 
@@ -20,7 +22,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--slavic-red);
     color: var(--wheat);
 }
@@ -48,8 +49,8 @@ header {
 }
 /* When links are clicked (or clicked and held) 
 the color will be dark slate blue */
-#header bar a:active {
-    color: rgb(66, 60, 101);
+#header-bar a:active {
+    color: var(--slavic-blue);
 } 
 
 h1,
@@ -58,14 +59,175 @@ h2 {
     color: var(--slavic-blue);
 }
 
+
+/* -----CONTENT SECTIONS----- */
+/* Set sections as columns */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: space-between;
+    border: solid;
+    border-color: var(--slavic-blue);
+    border-radius: 5px;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 25%;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: var(--slavic-red);
+    margin: 10px 25px 10px 10px;
+}
+
+/* -----ABOUT ME----- */
+.my-about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: var(--slavic-red);
+}
+
+h2 {
+    border-right: 5px solid var(--slavic-blue);
+    height: 100px;
+    padding-right: 10px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: var(--slavic-red);
+    margin: 10px 25px 10px 150px;
+}
+
+article p {
+    margin: 2% 0;
+}
 /* Set profile picture properties */
 .profile-pic img{
     max-width: 200px;
     float: right;
+    padding: 10px 25px 10px 25px;
 }
+
+/* -----MY PROJECTS----- */
+/* set content as a row (default) */
+.my-projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+}
+
+.project-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    border: dotted;
+    border-color: var(--slavic-red);
+    margin: 10px 25px 10px 70px;
+}
+
+/* .project-section {
+    display: flex;
+    /* flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: space-between;
+    border: dotted;
+    border-color: var(--slavic-red);
+    padding: 10px 25px 10px 75px;
+} */
 
 .project-image img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
     width: 200px;
     height: 50px;
+    padding: 10px 10px;
 }
 
+/* ----- CONTACT ME ----- */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+
+}
+
+/* Align navigation links*/
+#contact-bar ul {
+    list-style-type: none;
+    text-align: right;
+    }
+
+/* set header list properties */
+.contact-link {
+    list-style-type: none;
+    font-size: 20px;
+    display: inline;
+    padding: 10px 25px 0px 10px;
+}
+
+/* Define text color for navigation links*/
+#contact-bar a {
+    color: var(--slavic-blue); 
+}
+/* When links are clicked (or clicked and held) 
+the color will be dark slate blue */
+#contact-bar a:active {
+    color: var(--slavic-red);
+} 
+
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
