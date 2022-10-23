@@ -1,4 +1,4 @@
-
+/* Create global variables that are used throughout */
 :root {
     --slavic-red: rgb(186, 60, 60);
     --slavic-blue: rgb(66, 60, 101);
@@ -59,6 +59,12 @@ h2 {
     color: var(--slavic-blue);
 }
 
+h2 {
+    border-right: 5px solid;
+    border-color: var(--slavic-blue);
+    
+}
+
 
 /* -----CONTENT SECTIONS----- */
 /* Set sections as columns */
@@ -67,7 +73,7 @@ h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-self: center;
+    align-items: center;
     border: solid;
     border-color: var(--slavic-blue);
     border-radius: 5px;
@@ -82,9 +88,24 @@ h2 {
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    border: dotted;
-    border-color: var(--slavic-red);
     margin: 10px 25px 10px 10px;
+    /* Use a dotted border to show flex properties */
+    border: dotted;
+    border-color: var(--slavic-red); 
+}
+
+.biography {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--flax);
+    color: var(--slavic-blue);
+    /* Use a dotted border to show flex properties */
+    border: dotted;
+    border-color: var(--slavic-red); 
 }
 
 article {
@@ -92,14 +113,17 @@ article {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     min-width: 300px;
+    max-width: 800px;
     flex: 1 0;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
+    margin: 10px 25px 10px 10px;
+    /* Use a dotted border to show flex properties */
     border: dotted;
     border-color: var(--slavic-red);
-    margin: 10px 25px 10px 10px;
 }
 
 .profile-pic {
@@ -109,6 +133,7 @@ article {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    /* Use a dotted border to show flex properties */
     border: dotted;
     border-color: var(--slavic-red);
 }
@@ -126,13 +151,16 @@ article p {
 /* -----MY PROJECTS----- */
 .my-projects {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
+    /* Use a dotted border to show flex properties */
+    border: dotted;
+    border-color: var(--slavic-red);
 }
 
 .project-section {
@@ -141,61 +169,96 @@ article p {
     /* flex-wrap: wrap; */
     justify-content: flex-end;
     align-items: center;
-    min-width: 300px;
+    /* min-width: 300px; */
     flex: 1 1;
     padding: 5px;
+    margin-left: 50px;
     background-color: var(--flax);
     color: var(--slavic-blue);
+    /* Use a dotted border to show flex properties */
     border: dotted;
     border-color: var(--slavic-red);
-    /* margin: 10px 25px 10px 70px; */
 }
 
-.main-proj-area {
+
+.main-proj-area .main-project {
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     flex: 1 2;
     padding: 5px;
+    position: relative;
     background-color: var(--flax);
     color: var(--slavic-blue);
+    /* Use a dotted border to show flex properties */
     border: dotted;
     border-color: green;
 }
+
+.main-proj-txt {
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    margin: 14.5rem 10.2rem 0rem 0rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--slavic-red);
+    color: var(--wheat);
+    border: 2px solid var(--slavic-red);
+    border-radius: 8px;
+
+  }
+
+  .sec-proj-txt {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    margin: 2rem 0rem 0rem 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--slavic-red);
+    color: var(--wheat);
+    border: 2px solid var(--slavic-red);
+    border-radius: 8px;
+    /* transition: all 0.5s ease-in-out; */
+  }
 
 .secondary-proj-area {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
+    /* Use a dotted border to show flex properties */
     border: dotted;
     border-color: green;
 }
 
-.project-image img{
+.project-image img {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: row;
-    align-items: center;
+    align-items: space-between;
     justify-content: space-between;
     width: 200px;
-    height: 50px;
+    height: 75px;
     margin: 10px;
 }
 
 .main-proj-pic {
-    width: 50%;
-    min-width: 300px;
+    width: 300px;
+    /* min-width: 300px; */
+    /* position: relative; */
 }
 
 .main-proj-pic:hover,
 .project-image:hover {
-  box-shadow: inset 0px 0px 8px var(--slavic-red), 0 0 15px var(--slavic-red);
+  box-shadow: inset 0px 0px 15px var(--slavic-red), 0 0 15px var(--slavic-red);
 }
 
 
@@ -222,6 +285,7 @@ article p {
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
+    /* Use a dotted border to show flex properties */
     border: dotted;
     border-color: var(--slavic-red);
 }
@@ -248,3 +312,31 @@ the color will be dark slate blue */
 #contact-bar a:active {
     color: var(--slavic-red);
 } 
+/* CHECK FUNCTIONS */
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (max-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .biography,
+    .my-projects,
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex: 1 0 100%; */
+        flex-direction: column;
+    }
+    .section-title {
+        border-bottom: 5px solid;
+        border-color: var(--slavic-blue);
+    }
+    
+  
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 768px) {
+    .section-title {
+        border-right: 5px solid;
+        border-color: var(--slavic-blue);
+    }
+    
+  }
