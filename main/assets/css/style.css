@@ -312,7 +312,7 @@ the color will be dark slate blue */
 #contact-bar a:active {
     color: var(--slavic-red);
 } 
-
+/* CHECK FUNCTIONS */
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (max-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
