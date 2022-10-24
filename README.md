@@ -7,11 +7,11 @@ The portfolio includes a biographical section, which includes a recent picture a
 
 When the website is opened (or when source code is opened in default browser), the following page should appear as shown in the images below, based on the viewport used. 
 
-![Small Screen view of Portfolio](./main/assets/images/small-screen.png)
+![Small Screen view of Portfolio](./assets/images/small-screen.png)
 
-![Medium Screen view of Portfolio](./main/assets/images/medium-screen.png)
+![Medium Screen view of Portfolio](./assets/images/medium-screen.png)
 
-![Large Screen view of Portfolio](./main/assets/images/large-screen.png)
+![Large Screen view of Portfolio](./assets/images/large-screen.png)
 
 > **Note 1**: This layout is designed for desktop viewing, so some of the elements may appear differently on individuals' devices.
 
