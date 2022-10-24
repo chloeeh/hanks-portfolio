@@ -8,12 +8,11 @@
 
 
 /* ----- BODY ----- */
-
 /*Add color to body background*/
 body {
     display: flex;
-  flex-direction: column;
-    background-color: #f1d7b2;
+    flex-direction: column;
+    background-color: var(--flax);
 } 
 
 /* ----- HEADER ----- */
@@ -32,9 +31,12 @@ header {
     text-align: right;
     }
 
-#header-text {
+/* Define text color for header */
+#header-name,
+#header-bar a {
     color: var(--wheat);
 }
+
 /* set header list properties */
 .header-link {
     list-style-type: none;
@@ -43,31 +45,22 @@ header {
     padding: 10px 25px 5px 10px;
 }
 
-/* Define text color for navigation links*/
-#header-bar a {
-    color: var(--wheat); 
-}
 /* When links are clicked (or clicked and held) 
 the color will be dark slate blue */
 #header-bar a:active {
     color: var(--slavic-blue);
 } 
 
+/* -----Title Text----- */
 h1,
 h2 {
     font-size: 200%;
     color: var(--slavic-blue);
 }
 
-h2 {
-    border-right: 5px solid;
-    border-color: var(--slavic-blue);
-    
-}
-
 
 /* -----CONTENT SECTIONS----- */
-/* Set sections as columns */
+/* Set sections main flexbox container properties (one for 'About Me,' one for 'My Projects,' one for 'Contact Me') */
 .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -78,8 +71,7 @@ h2 {
     border-color: var(--slavic-blue);
     border-radius: 5px;
 }
-
-/* -----ABOUT ME----- */
+/* Section Title Flex Elements */
 .section-title {
     display: flex;
     flex-direction: column;
@@ -89,11 +81,13 @@ h2 {
     background-color: var(--flax);
     color: var(--slavic-blue);
     margin: 10px 25px 10px 10px;
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: var(--slavic-red); 
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: var(--slavic-red);  */
 }
 
+/* -----ABOUT ME----- */
+/* About Me Flex Container */
 .biography {
     display: flex;
     flex-wrap: wrap;
@@ -103,11 +97,12 @@ h2 {
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: var(--slavic-red); 
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: var(--slavic-red);  */
 }
 
+/* About Me Bio Flex Element */
 article {
     display: flex;
     flex-direction: column;
@@ -120,20 +115,8 @@ article {
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    margin: 10px 25px 10px 10px;
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: var(--slavic-red);
-}
-
-.profile-pic {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    /* Use a dotted border to show flex properties */
+    margin: 10px 25px 10px 75px;
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
     border: dotted;
     border-color: var(--slavic-red);
 }
@@ -141,6 +124,20 @@ article {
 article p {
     margin: 2% 0;
 }
+
+/* Bio Image Flex Element */
+.profile-pic {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: var(--slavic-red); */
+}
+
 /* Set profile picture properties */
 .profile-pic img{
     max-width: 200px;
@@ -149,6 +146,7 @@ article p {
 }
 
 /* -----MY PROJECTS----- */
+/* Flex Container */
 .my-projects {
     display: flex;
     /* flex-wrap: wrap; */
@@ -158,11 +156,12 @@ article p {
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: var(--slavic-red);
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: var(--slavic-red); */
 }
 
+/* Project Flex Element, Flex Container for sub-elements */
 .project-section {
     display: flex;
     flex-direction: column;
@@ -175,11 +174,12 @@ article p {
     margin-left: 50px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    /* Use a dotted border to show flex properties */
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
     border: dotted;
     border-color: var(--slavic-red);
 }
 
+/* Flex Element for Main Project image */
 .main-proj-area .main-project {
     display: flex;
     flex-direction: row;
@@ -191,36 +191,26 @@ article p {
     position: relative;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: green;
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: green; */
 }
-
+.main-proj-pic {
+    width: 300px;
+    /* min-width: 300px; */
+    /* position: relative; */
+}
+/* Text Label for main project image */
 .main-proj-txt {
     position: absolute;
     display: block;
     white-space: nowrap;
-    margin: 14.5rem 10.2rem 0rem 0rem;
+    margin: 14.5rem 10.5rem 0rem 0rem;
     padding: 0.5rem 1rem;
     background-color: var(--slavic-red);
     color: var(--wheat);
     border: 2px solid var(--slavic-red);
     border-radius: 8px;
-
-  }
-
-  .sec-proj-txt {
-    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-    position: absolute;
-    display: block;
-    white-space: nowrap;
-    margin: 2rem 0rem 0rem 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--slavic-red);
-    color: var(--wheat);
-    border: 2px solid var(--slavic-red);
-    border-radius: 8px;
-    /* transition: all 0.5s ease-in-out; */
   }
 
 .secondary-proj-area {
@@ -233,9 +223,9 @@ article p {
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: green;
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: green; */
 }
 
 .project-image img {
@@ -249,17 +239,26 @@ article p {
     margin: 10px;
 }
 
-.main-proj-pic {
-    width: 300px;
-    /* min-width: 300px; */
-    /* position: relative; */
-}
+.sec-proj-txt {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    margin: 2rem 0rem 0rem 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--slavic-red);
+    color: var(--wheat);
+    border: 2px solid var(--slavic-red);
+    border-radius: 8px;
+    /* transition: all 0.5s ease-in-out; */
+    }
 
+/* Show shadow around project images when user hovers */
 .main-proj-pic:hover,
 .project-image:hover {
   box-shadow: inset 0px 0px 15px var(--slavic-red), 0 0 15px var(--slavic-red);
 }
-
+/* Change shadow color when user clicks on any project image  */
 .main-proj-pic:active,
 .project-image:active {
     box-shadow: inset 0px 0px 15px var(--slavic-blue), 0 0 15px var(--slavic-blue);
@@ -267,6 +266,7 @@ article p {
 
 
 /* ----- CONTACT ME ----- */
+/* Flex Container for Contact Info */
 .contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -285,13 +285,13 @@ article p {
     justify-content: space-between;
     align-items: center;
     min-width: 300px;
-    flex: 1 1;
+    /* flex: 1 1; */
     padding: 5px;
     background-color: var(--flax);
     color: var(--slavic-blue);
-    /* Use a dotted border to show flex properties */
-    border: dotted;
-    border-color: var(--slavic-red);
+    /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
+    /* border: dotted;
+    border-color: var(--slavic-red); */
 }
 /* Align navigation links*/
 #contact-bar ul {
@@ -299,7 +299,7 @@ article p {
     text-align: right;
     }
 
-/* set header list properties */
+/* set contact link list properties */
 .contact-link {
     list-style-type: none;
     font-size: 20px;
@@ -311,13 +311,13 @@ article p {
 #contact-bar a {
     color: var(--slavic-blue); 
 }
-/* When links are clicked (or clicked and held) 
-the color will be dark slate blue */
+/* Color changes when contact links are clicked (or clicked and held) color changes*/
 #contact-bar a:active {
     color: var(--slavic-red);
 } 
-/* CHECK FUNCTIONS */
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+
+/* -----VIEWPORT PROPERTIES----- */
+/* For devices with viewports <768px... */
 @media screen and (max-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
     .biography,
@@ -335,12 +335,39 @@ the color will be dark slate blue */
     header {
         width: 100%;
     }
-}
-  
-/* media query for larger screens */
-@media screen and (max-width: 992px) {
-.section-title {
-    border-right: 5px solid;
-    border-color: var(--slavic-blue);
+    .project-section {
+        margin: 10px 25px 10px 10px;
+    }
+    article {
+        margin: 10px 25px 10px 10px;
     }
 }
+/* media query for larger screens */
+@media screen and (min-width: 768px) {
+    .section-title {
+        border-right: 5px solid;
+        border-color: var(--slavic-blue);
+        }
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+    .section-title {
+        border-right: 5px solid;
+        border-color: var(--slavic-blue);
+        }
+    /* set header list properties */
+    .header-link {
+        list-style-type: none;
+        font-size: 20px;
+        display: inline-block;
+        padding: 10px 125px 5px 10px;
+        }
+        .contact-link {
+            list-style-type: none;
+            font-size: 20px;
+            display: inline;
+            padding: 10px 75px 0px 75px;
+        }
+}
+
