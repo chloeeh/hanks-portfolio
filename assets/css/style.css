@@ -6,6 +6,11 @@
     --flax: #f1d7b2;
 }
 
+/* When user clicks on header navigation links, 
+the page will scroll to the appropriate section */
+html {
+    scroll-behavior: smooth;
+}
 
 /* ----- BODY ----- */
 /*Add color to body background*/
