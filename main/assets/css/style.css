@@ -39,8 +39,8 @@ header {
 .header-link {
     list-style-type: none;
     font-size: 20px;
-    display: inline;
-    padding: 10px 25px 0px 10px;
+    display: inline-block;
+    padding: 10px 25px 5px 10px;
 }
 
 /* Define text color for navigation links*/
@@ -180,7 +180,6 @@ article p {
     border-color: var(--slavic-red);
 }
 
-
 .main-proj-area .main-project {
     display: flex;
     flex-direction: row;
@@ -261,6 +260,11 @@ article p {
   box-shadow: inset 0px 0px 15px var(--slavic-red), 0 0 15px var(--slavic-red);
 }
 
+.main-proj-pic:active,
+.project-image:active {
+    box-shadow: inset 0px 0px 15px var(--slavic-blue), 0 0 15px var(--slavic-blue);
+} 
+
 
 /* ----- CONTACT ME ----- */
 .contact-info {
@@ -328,15 +332,15 @@ the color will be dark slate blue */
         border-bottom: 5px solid;
         border-color: var(--slavic-blue);
     }
-    
-  
-  }
-  
-  /* media query for larger screens */
-  @media screen and (min-width: 768px) {
-    .section-title {
-        border-right: 5px solid;
-        border-color: var(--slavic-blue);
+    header {
+        width: 100%;
     }
-    
-  }
+}
+  
+/* media query for larger screens */
+@media screen and (max-width: 992px) {
+.section-title {
+    border-right: 5px solid;
+    border-color: var(--slavic-blue);
+    }
+}
