@@ -193,14 +193,12 @@ article p {
     background-color: var(--flax);
     color: var(--slavic-blue);
     /* Use a dotted border to show flex properties. Leave these comments in for later debugging */
-    border: dotted;
-    border-color: green;
+    /* border: dotted;
+    border-color: green; */
 }
 .main-proj-pic {
     width: 300px;
     padding: 10px;
-    /* min-width: 300px; */
-    /* position: relative; */
 }
 /* Text Label for main project image */
 .main-proj-txt {
@@ -232,7 +230,6 @@ article p {
 
 .project-image img {
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: row;
     align-items: space-between;
     justify-content: space-between;
@@ -252,7 +249,6 @@ article p {
     color: var(--wheat);
     border: 2px solid var(--slavic-red);
     border-radius: 8px;
-    /* transition: all 0.5s ease-in-out; */
     }
 
 /* Show shadow around project images when user hovers */
@@ -320,7 +316,6 @@ article p {
 /* -----VIEWPORT PROPERTIES----- */
 /* For devices with viewports <768px... */
 @media screen and (max-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
     .biography,
     .my-projects,
     .contact-info {
@@ -350,24 +345,24 @@ article p {
         }
 }
 
-/* media query for larger screens */
+/* media query for even larger screens */
 @media screen and (min-width: 992px) {
     .section-title {
         border-right: 5px solid;
         border-color: var(--slavic-blue);
         }
-    /* set header list properties */
+    /* set list properties */
     .header-link {
         list-style-type: none;
         font-size: 20px;
         display: inline-block;
         padding: 10px 125px 5px 10px;
         }
-        .contact-link {
-            list-style-type: none;
-            font-size: 20px;
-            display: inline;
-            padding: 10px 75px 0px 75px;
-        }
+    .contact-link {
+        list-style-type: none;
+        font-size: 20px;
+        display: inline;
+        padding: 10px 75px 0px 75px;
+    }
 }
 
