@@ -334,7 +334,7 @@ article p {
         margin: 10px 25px 10px 10px;
     }
     article {
-        margin: 10px 25px 10px 10px;
+        flex: 1;
     }
 }
 /* media query for larger screens */
@@ -343,6 +343,9 @@ article p {
         border-right: 5px solid;
         border-color: var(--slavic-blue);
         }
+    article {
+        flex: 1;
+    }
 }
 
 /* media query for even larger screens */
@@ -363,6 +366,9 @@ article p {
         font-size: 20px;
         display: inline;
         padding: 10px 75px 0px 75px;
+    }
+    article {
+        flex: 1;
     }
 }
 
