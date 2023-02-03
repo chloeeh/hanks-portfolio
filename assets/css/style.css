@@ -199,6 +199,7 @@ article p {
 .main-proj-pic {
     object-fit: cover;
     width: 400px;
+    height: 300px;
     padding: 10px;
 }
 /* Text Label for main project image */
